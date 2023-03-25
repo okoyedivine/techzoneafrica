@@ -15,7 +15,7 @@
     font-size: 40px;
   }
 
-  body {background-color: darkslategray; background-image: ;}
+  body {background-color: #3e3e42;}
 
   /*styling navbar*/
   .navbar {overflow: hidden; background-color: none; color: white;}
@@ -67,7 +67,7 @@
             width: 100%;}
     }
 
-    .footer {background-color: darkslategrey; height: 10vh; margin: auto; width: auto; text-align: center;}
+    .footer { height: 10vh; margin: auto; width: auto; text-align: center;}
 
     .footer a{ color: white; padding: 20px; text-align: center; text-decoration: none; margin: 20px; font-size: small; background-color: lightslategrey;}
 
@@ -75,5 +75,5 @@
 
 .bulb{width: 10%; height: 10%;}
 
-h1{font-size: x-large; font-weight: 800;}
+h1{font-size:xx-large; font-weight: 800;}
     
