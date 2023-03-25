@@ -1,0 +1,79 @@
+ .header {
+    padding: 80px; /* some padding */
+    text-align: center; /* center the text */
+    color: white; /* white text color */
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .techzoneimg {display: block; margin-left: auto; margin-right: auto; width: 100%; height: auto;}
+  
+  /* Increase the font size of the <h1> element */
+  .header h1 {
+    font-size: 40px;
+  }
+
+  body {background-color: darkslategray; background-image: ;}
+
+  /*styling navbar*/
+  .navbar {overflow: hidden; background-color: none; color: white;}
+
+  .navbar a {color: white; float: left; display: block; text-align: center; padding: 14px 20px; text-decoration: none;}
+
+  .navbar a.packages {float: right;}
+
+  .navbar a:hover {color: aqua; background-color: darkgray;}
+
+  /* Ensure proper sizing */
+* {
+    box-sizing: border-box;
+  }
+
+  /* Column container */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* Create two unequal columns that sits next to each other */
+
+/* Sidebar/left column */
+.side {
+    flex: 30%; /* Set the width of the sidebar */
+    padding: 20px; /* Some padding */
+    background-color: green;
+}
+
+  /* Main column */
+.main {
+    flex: 70%; /* Set the width of the main content */
+    padding: 20px; /* Some padding */
+    background-color: rgb(74, 74, 136);
+  }
+
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    .row {
+      flex-direction: column;
+    }
+  }
+
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+            width: 100%;}
+    }
+
+    .footer {background-color: darkslategrey; height: 10vh; margin: auto; width: auto; text-align: center;}
+
+    .footer a{ color: white; padding: 20px; text-align: center; text-decoration: none; margin: 20px;}
+
+    .footer a:hover{background-color:rgb(74, 74, 136);}
+
+.bulb{width: 10%; height: 10%;}
+
+h1{font-size: x-large; font-weight: 800;}
+    
