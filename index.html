@@ -7,13 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-
-<script>
-
-
-
-</script>
+<script src="myscript.js"></script>
 
 </head>
 
@@ -25,7 +19,9 @@
         <div class="navbar">
             <a href="#register" class="register">REGISTER</a>
             <a href="#home" class="home">HOME</a>
-            <a href="#" class="packages">PACKAGES</a>   
+            <a href="#socialmedia" class="socialnedia">SOCIAL MEDIA</a> 
+            <a href="#" class="packages">PACKAGES</a>
+              
         </div>
 
         <h1>TECH ZONE AFRICA</h1>
@@ -52,25 +48,25 @@
     <div class="myform">
 
         
-    <form action="#">
+    <form id="myform" onsubmit="return validateForm()">
         <fieldset>
             
         <div class="formcomp"><label for="name">NAME</label>
-            <input type="text" id="name" name="name" placeholder="ENTER YOUR FULLNAME" required>
+            <input type="text" id="name" name="name" placeholder="ENTER YOUR FULLNAME" >
             <!--<i class="fa fa-check-circle"></i>
             <i class="fa fa-exclamation-circle"></i>
             <small>Error</small>-->
         </div>
 
         <div class="formcomp"><label for="username">USERNAME</label>
-            <input type="text" id="username" name="username" placeholder="ENTER YOUR USERNAME" required>
+            <input type="text" id="username" name="username" placeholder="ENTER YOUR USERNAME" >
             <!--<i class="fa fa-check-circle"></i>
             <i class="fa fa-exclamation-circle"></i>
             <small>Error</small>-->
         </div>
 
         <div class="formcomp"><label for="email">EMAIL</label>
-            <input type="email" id="email" name="email" placeholder="ENTER YOUR EMAIL" required>
+            <input type="email" id="email" name="email" placeholder="ENTER YOUR EMAIL" >
            <!-- <i class="fa fa-check-circle"></i>
             <i class="fa fa-exclamation-circle"></i>
             <small>Error</small>-->
@@ -78,7 +74,7 @@
 
         <div class="formcomp">
             <label for="password">PASSWORD</label>
-            <input type="password" id="password" name="password" placeholder="ENTER YOUR PASSWORD" required>
+            <input type="password" id="password" name="password" placeholder="ENTER YOUR PASSWORD" >
            <!--<i class="fa fa-check-circle"></i>
             <i class="fa fa-exclamation-circle"></i>
             <small>Error</small>-->
@@ -86,13 +82,13 @@
 
         <div class="formcomp">
             <label for="password">PASSWORD CHECK</label>
-            <input type="passwordcheck" id="passwordcheck" name="passwordcheck" placeholder="RE-ENTER PASSWORD" required>
+            <input type="passwordcheck" id="passwordcheck" name="passwordcheck" placeholder="RE-ENTER PASSWORD" >
             <!--<i class="fa fa-check-circle"></i>
             <i class="fa fa-exclamation-circle"></i>
             <small>Error</small>-->
         </div>
 
-        <button type="submit" class="submit">REGISTER NOW</button>
+        <button type="submit" class="submit" id="submit-btn">REGISTER NOW</button>
 
         </fieldset>
     </form>
@@ -100,13 +96,14 @@
 
     </section>
     
+    <section id="socialmedia">
     <div class="social">
         <div class="connect"><h3>CONNECT WITH US ON SOCIAL MEDIA</h3></div><br><br>
 
         <div class="socialurl"><a href="https://twitter.com/techzoneafrica" class="fa fa-twitter"></a> 
         <a href="https://t.me/techzoneafrica" class="fa fa-telegram"></a></div>
     </div>
-
+    </section>
 
 
     <footer>All rights reserved &#169; TechZoneAfrica2023 Designed by Deodivine &#8482;</footer>
