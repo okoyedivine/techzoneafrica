@@ -2,7 +2,8 @@ function validateForm() {
   const name = document.getElementById("name").value.trim();
   const username = document.getElementById("username").value.trim();
   const email = document.getElementById("email").value.trim();
-  const password = document.getElementById("password").value.trim();
+  const password1 = document.getElementById("password1").value.trim();
+  const password2 = document.getElementById("password2").value.trim();
 
   if (name === "") {
     alert("Name must be filled out");
@@ -30,50 +31,67 @@ function validateForm() {
     return false;
   }
 
-  if (password === "") {
+  if (password1 === "") {
     alert("Password must be filled out");
     return false;
   }
 
-  if (!isPasswordValid(password)) {
+  if (!isPasswordValid(password1)) {
     alert("Password must contain at least one capital letter, one special character, one number, and be at least 6 characters long.");
     return false;
   }
 
-  alert("SUCCESS!");
+  if (!doPasswordsMatch(password1, password2)) {
+    alert("Passwords do not match.");
+    return false;
+  }
+
+  alert("SUCCESS! Check your email for verification link");
   return true;
 }
 
 
-
+//function to check if email is valid
 function isValidEmail(email) {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return regex.test(email);
 }
 
+//function to check if password is valid
 
-
-function isPasswordValid(password) {
+function isPasswordValid(password1) {
   const capitalLetterRegex = /[A-Z]/;
   const specialCharRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
   const numberRegex = /\d/;
   
-  if (!capitalLetterRegex.test(password)) {
+  if (!capitalLetterRegex.test(password1)) {
     return false;
   }
 
-  if (!specialCharRegex.test(password)) {
+  if (!specialCharRegex.test(password1)) {
     return false;
   }
 
-  if (!numberRegex.test(password)) {
+  if (!numberRegex.test(password1)) {
     return false;
   }
 
-  if (password.length < 6) {
+  if (password1.length < 6) {
     return false;
   }
 
   return true;
 }
+
+
+
+//function to check if password 1 and 2 match
+
+function doPasswordsMatch(password1, password2) {
+  if (password1 !== password2) {
+    return false;
+  }
+  return true;
+}
+
 
